@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke tests">
+
+    <test name="POST XML">
+        <parameter name="petId" value="5"/>
+        <parameter name="petName" value="Tyzik"/>
+        <parameter name="petCategoryId" value="1"/>
+        <parameter name="petCategoryName" value="Animal"/>
+<!--        <parameter name="photoUrl" value=""/>-->
+        <parameter name="petTagId" value="2"/>
+        <parameter name="petTagName" value="TagOne"/>
+        <parameter name="petStatus" value="available"/>
+        <classes>
+            <class name="TestNGTest2"/>
+        </classes>
+    </test>
+
+
+
+    <test name="PUT XML">
+        <parameter name="petId" value="5"/>
+        <parameter name="petName" value="Rabbit"/>
+        <parameter name="petCategoryId" value="1"/>
+        <parameter name="categoryName" value="Animal"/>
+    <!--    <parameter name="photoUrl" value=""/>-->
+        <parameter name="petTagId" value="2"/>
+        <parameter name="petTagName" value="TagOne"/>
+        <parameter name="petStatus" value="available"/>
+        <classes>
+            <class name="TestNGTest2">
+                <methods>
+                    <include name="put"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
