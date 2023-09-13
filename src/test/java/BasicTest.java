@@ -2,11 +2,8 @@ import org.rest.pojo.Category;
 import org.rest.pojo.Pet;
 import org.rest.pojo.Tag;
 import org.testng.annotations.Test;
-
 import java.util.Collections;
-
 import static io.restassured.RestAssured.given;
-
 public class BasicTest {
 
     // Serialization -> when we transform classes into Json.
@@ -22,7 +19,6 @@ public class BasicTest {
                 .log()
                 .ifValidationFails();
     }
-
     @Test
     public void test2() {
         Category category = new Category();
@@ -53,8 +49,6 @@ public class BasicTest {
                 .all()
                 .statusCode(200);
     }
-
-
     @Test
    public void test3() {
         given()
@@ -67,28 +61,8 @@ public class BasicTest {
                 .all()
                 .statusCode(200);
     }
-
     @Test
    public void test4() {
-//        String pet3 = "{\n" +
-//                "  \"id\": 321,\n" +
-//                "  \"category\": {\n" +
-//                "    \"id\": 1,\n" +
-//                "    \"name\": \"dogs\"\n" +
-//                "  },\n" +
-//                "  \"name\": \"Burek\",\n" +
-//                "  \"photoUrls\": [\n" +
-//                "    \"http://photos.com/dog1.jpg\"\n" +
-//                "  ],\n" +
-//                "  \"tags\": [\n" +
-//                "    {\n" +
-//                "      \"id\": 1,\n" +
-//                "      \"name\": \"dogs-category\"\n" +
-//                "    }\n" +
-//                "  ],\n" +
-//                "  \"status\": \"available\"\n" +
-//                "}";
-
         Category category = new Category();
         category.setId(1);
         category.setName("Spiders");
@@ -117,7 +91,6 @@ public class BasicTest {
                 .all()
                 .statusCode(200);
     }
-
     @Test
    public void test5() {
         given()
@@ -130,28 +103,8 @@ public class BasicTest {
                 .all()
                 .statusCode(200);
     }
-
     @Test
    public void test6() {
-//        String pet = "{\n" +
-//                "  \"id\": 321,\n" +
-//                "  \"category\": {\n" +
-//                "    \"id\": 1,\n" +
-//                "    \"name\": \"dogs\"\n" +
-//                "  },\n" +
-//                "  \"name\": \"Vitek\",\n" +
-//                "  \"photoUrls\": [\n" +
-//                "    \"http://photos.com/dog1.jpg\"\n" +
-//                "  ],\n" +
-//                "  \"tags\": [\n" +
-//                "    {\n" +
-//                "      \"id\": 1,\n" +
-//                "      \"name\": \"dogs-category\"\n" +
-//                "    }\n" +
-//                "  ],\n" +
-//                "  \"status\": \"available\"\n" +
-//                "}";
-
         Category category = new Category();
         category.setId(1);
         category.setName("Spider");
@@ -168,7 +121,6 @@ public class BasicTest {
         pet.setTags(Collections.singletonList(tag));
         pet.setPhotoUrls(Collections.singletonList("http://photos.com/dog1.jpg"));
 
-
                 given()
                         .log()
                         .all()
@@ -181,7 +133,6 @@ public class BasicTest {
                         .all()
                         .statusCode(200);
     }
-
     @Test
     public void test7() {
         given()
@@ -194,7 +145,6 @@ public class BasicTest {
                 .all()
                 .statusCode(200);
     }
-
     @Test
    public void test8() {
         given()
@@ -207,6 +157,5 @@ public class BasicTest {
                 .log()
                 .all()
                 .statusCode(200);
-
     }
 }

@@ -2,17 +2,6 @@ import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
 public class PostGetPutDeleteTest implements Animal {
-    //create one test and use all instructions(4) in one test. Test has to be passed.
-    //create 5th instruction make sure that pet is deleted
-
-    //GET
-    //POST
-    //GET
-    //PUT
-    //GET
-    //DELETE
-    //GET
-
     @Test
     public void test() {
 
@@ -66,6 +55,5 @@ public class PostGetPutDeleteTest implements Animal {
                 .log()
                 .all()
                 .statusCode(200);
-
     }
 }

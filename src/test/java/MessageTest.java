@@ -17,7 +17,6 @@ public class MessageTest {
                 .when()
                 .post("http://booking.com/message");
 
-
         Message message1 = new Message();
         message1.setMessage("Getting out of bed is almost always wrong decision");
         RestAssured
@@ -30,7 +29,4 @@ public class MessageTest {
                 .post("http://booking.com/message");
 
     }
-
-
-
 }

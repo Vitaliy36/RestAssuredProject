@@ -50,7 +50,7 @@ public class DeserializTest {
         request.setTags(Collections.singletonList(tag));  // singleElement - static method return an immutable list containing only the specific object.
         request.setPhotoUrls(Collections.singletonList("http://photos.com/dog1.jpg"));
 
-        // For header and cookie I used google website
+        // For header and cookie I used Google website
         Pet response = given()
 //                .header("header", "Authorization", "SAPISIDHASH 1685817221_db84ccd1986c0155127d44f5124e55175ddb5024")
 //                .header("header", "Authorization", "123")
@@ -66,14 +66,10 @@ public class DeserializTest {
         Assert.assertEquals(response.getCategory().getId(), request.getCategory().getId(), "Pet CatID");
         Assert.assertEquals(response.getStatus(), request.getStatus(), "Pet Status");
         Assert.assertEquals(response.getPhotoUrls().get(0), request.getPhotoUrls().get(0), "Pet PhotoURL");
-        // H/W Each test(7) from BasicTest to do Deserialization.
-        // Postman Post and must be deleted
     }
 
     @Test
     public void test2() {
-//        RestAssured.baseURI = "https://petstore.swagger.io/#/pet/getPetById";
-//        RestAssured.given().contentType(ContentType.JSON).when().get().as(Pet.class);
        Pet response = given()
                 .pathParam("petId", 3)
                 .contentType("application/json")
