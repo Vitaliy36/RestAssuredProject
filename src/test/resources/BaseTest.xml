@@ -17,7 +17,6 @@
     </test>
 
 
-
     <test name="PUT XML">
         <parameter name="petId" value="5"/>
         <parameter name="petName" value="Rabbit"/>

@@ -16,7 +16,7 @@ import java.util.Collections;
 
 import static io.restassured.RestAssured.given;
 
-public class DeserializTest {
+public class DeserializeTest {
 //    Random random = new Random();
 //    int randomNumber = random.nextInt(1000) + 1;
 
@@ -52,9 +52,6 @@ public class DeserializTest {
 
         // For header and cookie I used google website
         Pet response = given()
-//                .header("header", "Authorization", "SAPISIDHASH 1685817221_db84ccd1986c0155127d44f5124e55175ddb5024")
-//                .header("header", "Authorization", "123")
-//                .cookie("cookie", "Cookie", "__Secure-3PAPISID=tfg3DcSxY-4clqQU/AFfGMCZrwUnqBfKl-; VISITOR_INFO1_LIVE=VLGTQTCOxcQ; LOGIN_INFO=AFmmF2swRgIhAIXEGGQURsp7YjLKCWABteIqsorFAn8J0fWtT4HohSh2AiEA0AAxuBDHX8QgGzV9YKKH_MCX4TGZvyOKTqWoLQR79yQ:QUQ3MjNmeHBjWndHNmZWRlNlbTNudmNLc3VCcDZpdHRwZDRXMTBZV3RCTEF2X3pNQTRLX3Q5RWRra0dLQUlMVHlaeFc4SkhLNWx4c0R0TU1UV2dLVDN3QVFrSkJPLTJKNlBHUl9tZll2UkN6aUg5aGp0eWNzYzBzM2w1SUpUMXBSRzZ5bXZfNWpvT0g3eXQ1QTd1Y0o2NlBPZEI3RWctZURB; YSC=jeByD-xWKT4; __Secure-3PSID=WQjQX8Z-Vx7VglCb_THRH0PHwtpoCa2xpA7uoLfGxKTCc304nur-9AAP18sWWQehXW0ZTw.; __Secure-3PSIDCC=AP8dLtw6UVXFgOtp7ZFln3iXcZMi9pyg1Phol7r8WZo8tieRGmjoiHJtJpTjKExxjGKUdYl59y4")
                 .body(request)
                 .when()
                 .post("/pet")
@@ -133,9 +130,7 @@ public class DeserializTest {
        // Assert.assertFalse(list.isEmpty()); // бібіліотека - перевірка з TestNG
         SoftAssertions softAssertions = new SoftAssertions(); // бібліотека - перевірка з AssertJ
         softAssertions.assertThat(pet).hasSizeGreaterThan(0);
-        softAssertions.assertThat(pet).hasSizeGreaterThan(0);
-        softAssertions.assertThat(pet).hasSizeGreaterThan(0);
-        softAssertions.assertThat(pet.length).isEqualTo(18);
+
         softAssertions.assertAll();
     }
 

@@ -15,7 +15,9 @@ public class MessageTest {
                 .contentType("application/json")
                 .body(message)
                 .when()
-                .post("http://booking.com/message");
+                .post("http://booking.com/message")
+                .then()
+                .statusCode(200);
 
 
         Message message1 = new Message();
@@ -27,7 +29,9 @@ public class MessageTest {
                 .contentType("application/json")
                 .body(message1)
                 .when()
-                .post("http://booking.com/message");
+                .post("http://booking.com/message")
+                .then()
+                .statusCode(200);
 
     }
 
