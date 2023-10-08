@@ -36,3 +36,10 @@ build/
 
 ### Mac OS ###
 .DS_Store
+.settings/
+
+# Intellij
+.idea/
+
+# Maven
+log/
